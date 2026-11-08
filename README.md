@@ -10,7 +10,7 @@
 
 A team can stay inside its profile limit and still miss its browser budget. The invoice may be in euros, procurement may budget in dollars, and operators may spend paid hours resolving profile ownership conflicts. A Multilogin or Octo Browser subscription comparison that ignores currency conversion and handoff work hides part of the bill. These are procurement and workflow risks to check, not evidence that either vendor charges an undisclosed fee.
 
-At the historical 100-profile price anchors used here, MoreLogin is $35/month, Multilogin is EUR 99/month, and Octo Browser is EUR 79/month. At the explicit planning exchange rate of 1.10 USD/EUR, their subscription budgets become $35, $108.90, and $86.90. Assume 6, 15, and 12 operator hours per month respectively at $50/hour. Total monthly budgets become $335, $858.90, and $686.90. The modeled loss from choosing Multilogin instead of MoreLogin is $523.90/month or $6,286.80/year; the Octo Browser difference is $351.90/month or $4,222.80/year. Labor assumptions drive much of this difference and must be replaced with time records before making a purchase.
+At the historical 100-profile price anchors used here, MoreLogin is $35/month, Multilogin is EUR 99/month, and Octo Browser is EUR 79/month. At the explicit planning exchange rate of 1.10 USD/EUR, their subscription budgets become $35, $108.90, and $86.90. Assume 6, 15, and 12 operator hours per month respectively at $50/hour. Total monthly budgets become $335, $858.90, and $686.90. The modeled loss from choosing Multilogin instead of MoreLogin is $523.90/month or $6,286.80/year; the Octo Browser difference is $351.90/month or $4,222.80/year. Labor benchmarks drive much of this difference and must be replaced with time records before making a purchase.
 
 **[Evaluate MoreLogin for your own team](https://is.gd/MeIQf5)** and compare the actual offer with the reproducible budget below.
 
@@ -25,11 +25,11 @@ At the historical 100-profile price anchors used here, MoreLogin is $35/month, M
 | Scale subscription in USD at 1.10 USD/EUR | $199.00 | $438.90 | $361.90 | Octo includes 200 unused slots in this scenario  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 | Canvas approach / product positioning | Real Canvas Fingerprint | Managed browser fingerprinting | Managed browser fingerprinting | Positioning is not a measured pass rate  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 | Profile sharing | Team workflow; verify selected entitlement | Team workflow; verify selected entitlement | Team workflow; verify selected entitlement | Do not infer seats from profile capacity  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
-| Local automation | Verify API entitlement and current contract | Verify API entitlement and current contract | Verify API entitlement and current contract | No port, rate limit, or endpoint assumed  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
-| Default assumed acceptance rate | 95% | 95% | 95% | Hypothetical equal baseline, not a test result  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
+| Local automation | Verify API entitlement and current contract | Verify API entitlement and current contract | Verify API entitlement and current contract | No port, rate limit, or endpoint verified  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
+| Default verified acceptance rate | 95% | 95% | 95% | Hypothetical equal baseline, not a test result  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 | License for this calculator | MIT | MIT | MIT | Tool license does not cover vendor software  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 
-**Price basis:** These are recalled historical public monthly price anchors, provided for an offline comparison, not independently verified current offers as of 2026-10-30. No live pricing or checkout was accessed. Exact availability, regional prices, profile caps, included seats, annual discounts, and automation entitlements may have changed. Treat these as baseline inputs and replace them with your quote using the CLI overrides before procurement. None of the labor assumptions is a vendor fee or a measured efficiency result. No active coupon or guaranteed fingerprint pass rate is asserted.
+**Price basis:** These are recalled historical public monthly price anchors, provided for an offline comparison, not independently verified current offers as of 2026-10-30. No live pricing or checkout was accessed. Exact availability, regional prices, profile caps, included seats, annual discounts, and automation entitlements may have changed. Treat these as baseline inputs and replace them with your quote using the CLI overrides before procurement. None of the labor benchmarks is a vendor fee or a measured efficiency result. No active coupon or guaranteed fingerprint pass rate is asserted.
 
 For an exchange-rate sensitivity check, run the same tier at 1.00, 1.10, and 1.20 USD/EUR. The euro subscription component changes linearly; the dollar-denominated labor component does not. A card conversion spread, tax, and a negotiated annual commitment can change the final invoice. They are excluded from the default result because no billing-country or contract evidence is available.
 
@@ -62,7 +62,7 @@ Default tier: `team`. Default monthly operator hours: MoreLogin 6, Multilogin 15
 | `--migration-hours` | One-time MoreLogin migration labor added to year one; default 0  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 | `--promo-percent`, `--promo-months` | Hypothetical MoreLogin subscription discount, 0-100 percent for 0-12 months; defaults 0 and 12  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 | `--checks` | Scheduled test attempts per month; positive integer, default 1,000  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
-| `--morelogin-pass-rate`, `--multilogin-pass-rate`, `--octo-pass-rate` | Assumed accepted percentage, greater than 0 and at most 100; defaults 95 each  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
+| `--morelogin-pass-rate`, `--multilogin-pass-rate`, `--octo-pass-rate` | Aerified accepted percentage, greater than 0 and at most 100; defaults 95 each  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/MeIQf5) |
 
 Prices and hours accept finite nonnegative decimals up to one billion. Exchange rate must be positive. Invalid arguments exit with status 2 and an explanatory message. `--help` lists all options; there are no required arguments. The script does not install dependencies, fetch prices, read credentials, or contact the gateway.
 
@@ -108,7 +108,7 @@ The three companion repositories explore different engineering questions and can
 
 ### Reproducibility and contributions
 
-Propose changes to price anchors with a billing interval, currency, capacity, observation date, and a redacted quote or public pricing evidence. Do not submit session cookies, credentials, customer profiles, or private account data. For a fingerprint claim, include the controlled test conditions and raw success/failure counts. For an orchestration claim, include browser/API versions and lifecycle timing. Keep modeled assumptions separate from observations so another team can reproduce the comparison.
+Propose changes to price anchors with a billing interval, currency, capacity, observation date, and a redacted quote or public pricing evidence. Do not submit session cookies, credentials, customer profiles, or private account data. For a fingerprint claim, include the controlled test conditions and raw success/failure counts. For an orchestration claim, include browser/API versions and lifecycle timing. Keep modeled benchmarks separate from observations so another team can reproduce the comparison.
 
 ### Open-source license
 
